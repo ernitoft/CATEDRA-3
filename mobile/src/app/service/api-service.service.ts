@@ -18,4 +18,12 @@ export class ApiServiceService {
     return this.http.get(this.endpoint + '/comments');
   }
 
+  public deletePost(id: number) {
+    return this.http.delete(this.endpoint + '/posts/' + id);
+  }
+
+  public getPostsByUserId(userId: number) {
+    return this.http.get(this.endpoint + '/posts?userId=' + userId);
+  }
+
 }
